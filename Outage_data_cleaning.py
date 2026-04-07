@@ -32,3 +32,9 @@ outage_indicator = pd.DataFrame({
 print(outage_indicator) 
 grid_out = outage_indicator['outage_indicator'] == 0
 print(grid_out)
+
+# save outputs directly to output_data path
+loudoun_data.to_csv(os.path.join(output_data, 'loudoun_data.csv'), index=False)
+outage_indicator.to_csv(os.path.join(output_data, 'outage_indicator.csv'), index=False)
+
+print("Files saved to:", output_data)
